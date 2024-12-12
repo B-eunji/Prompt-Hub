@@ -3,10 +3,12 @@ import React, {useState} from 'react';
 import {supabase} from '../supabaseClient'
 
 function AuthForm(){
+    //이메일, 비밀번호, 메세지의 입력상태을 관리하기 위한 state 생성
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message,setMessage] = useState('');
 
+    //회원가입 처리를 위한 함수
     const handleSignUp = async () => {
         try{
             const {data, error} = await supabase.auth.signUp({
@@ -33,18 +35,18 @@ function AuthForm(){
             
             {/* 이메일 입력 필드 */}
             <input
-                type="email"
-                placeholder="이메일"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="email" //입력 유형: 이메일
+                placeholder="이메일" //사용자에게 표시될 텍스트
+                value={email} //입력값은 state로 관리
+                onChange={(e) => setEmail(e.target.value)} //사용자가 입력할 때 state 업데이트
             />
 
             {/* 비밀번호 입력 필드 */}
             <input
-                type="password"
-                placeholder="비밀번호"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                type="password" //입력 유형: 이메일
+                placeholder="비밀번호" //사용자에게 표시될 텍스트
+                value={password} //입력값은 state로 관리
+                onChange={(e) => setPassword(e.target.value)} //사용자가 입력할 때 state 업데이트
             />
 
             {/*회원가입 버튼 */}
@@ -54,5 +56,5 @@ function AuthForm(){
     );
 }
 
-export default AuthForm;
+export default AuthForm; //다른 파일에서 사용할 수 있도록 컴포넌트 내보내기
 
