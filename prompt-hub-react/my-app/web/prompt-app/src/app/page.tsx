@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import AuthForm from "./login/AuthForm";
 
 export default function Home() {
   return (
@@ -89,6 +90,10 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
+        <div>
+          <h1>Welcome to Prompt Hub</h1>
+          <AuthForm />
+          </div>
       </footer>
     </div>
   );

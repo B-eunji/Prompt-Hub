@@ -1,4 +1,6 @@
 //인증 폼 컴포넌트
+"use client"; //클라이언트 컴포넌트 선언 12.31 추가
+
 import React, {useState} from 'react';
 import {supabase} from '../supabaseClient'
 

@@ -2,7 +2,7 @@
 
 //회원가입 화면
 import React from 'react';
-import AuthForm from './components/AuthForm';
+import AuthForm from '../my-app/web/prompt-app/src/app/login/AuthForm';
 
 function App() {
   return (
