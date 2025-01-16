@@ -4,7 +4,7 @@
 import React, {useState} from 'react';
 import {supabase} from '../supabaseClient'
 
-function AuthForm(){
+function SignUpForm(){
     //이메일, 비밀번호, 메세지의 입력상태을 관리하기 위한 state 생성
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -58,5 +58,5 @@ function AuthForm(){
     );
 }
 
-export default AuthForm; //다른 파일에서 사용할 수 있도록 컴포넌트 내보내기
+export default SignUpForm; //다른 파일에서 사용할 수 있도록 컴포넌트 내보내기
 

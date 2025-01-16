@@ -1,6 +1,6 @@
 "use client"; //클라이언트 상태 관리 - 클라이언트 컴포넌트 설정
 
-import AuthForm from "./AuthForm";
+import LoginForm from "../login/LoginForm";
 import useAuthStore from "../../store/authStore"; //Zustand 상태 관리
 
 export default function LoginPage() {
@@ -12,7 +12,7 @@ export default function LoginPage() {
       {isLoggedIn ? (
         <p> 로그인 완료 </p>
       ) : (
-        <AuthForm />
+        <LoginForm />
       )}
     </div>
   );

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import AuthForm from "./login/AuthForm";
+import LoginForm from "./login/LoginForm";
 
 export default function Home() {
   return (
@@ -92,7 +92,7 @@ export default function Home() {
         </a>
         <div>
           <h1>Welcome to Prompt Hub</h1>
-          <AuthForm />
+          <LoginForm />
           </div>
       </footer>
     </div>
