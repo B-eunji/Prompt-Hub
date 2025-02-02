@@ -10,7 +10,7 @@ function LoginForm(){
     const[password, setPassword] = useState<string>(""); //비밀번호 입력값 저장
     const[message, setMessage] = useState<string>(""); //로그인 성공/실패 메세지 저장
 
-    const {setLoginState} = useAuthStore(); //Zustand를 통한 로그인 성공/실패 메세지 상태 업데이트 저장
+    const setLoginState = useAuthStore((state) => state.setLoginState); //Zustand를 통한 로그인 성공/실패 메세지 상태 업데이트 저장
     
     const handleLogin = async () => {
         try{
@@ -49,7 +49,7 @@ function LoginForm(){
             {/* 비밀번호 입력 필드*/}
             <input
                 type="password"
-                placeholer="비밀번호"
+                placeholder = "비밀번호"
                 value = {password}
                 onChange={(e) => setPassword(e.target.value)} //입력 시 state 업데이트
             >
