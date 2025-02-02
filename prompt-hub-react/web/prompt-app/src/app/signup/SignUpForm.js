@@ -6,9 +6,9 @@ import {supabase} from '../supabaseClient'
 
 function SignUpForm(){
     //이메일, 비밀번호, 메세지의 입력상태을 관리하기 위한 state 생성
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [message,setMessage] = useState('');
+    const [email, setEmail] = useState<String>('');
+    const [password, setPassword] = useState<String>('');
+    const [message,setMessage] = useState<String>('');
 
     //회원가입 처리를 위한 함수
     const handleSignUp = async () => {
